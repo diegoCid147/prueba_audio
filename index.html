@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contenido del libro</title>
+    <!-- Tu estilo CSS y otros elementos de estilo -->
+</head>
+<body>
+    <!-- Botón de reproducción -->
+    <button id="playButton">Reproducir Audio</button>
+
+    <!-- Elemento de audio -->
+    <audio id="myAudio" loop>
+        <source src="C:\Users\diego\OneDrive\Desktop\C5E\LITERATURA\2.2\pagina completa\y2mate.com - David Guetta  Lovers On The Sun Official Video ft Sam Martin.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Script JavaScript para controlar la reproducción -->
+    <script>
+        // Obtener referencias a los elementos de audio y el botón
+        var audio = document.getElementById("myAudio");
+        var playButton = document.getElementById("playButton");
+
+        // Agregar un evento de clic al botón de reproducción
+        playButton.addEventListener("click", function() {
+            // Verificar si el audio ya se está reproduciendo
+            if (audio.paused) {
+                // Iniciar la reproducción si está pausado
+                audio.play();
+                playButton.textContent = "Pausar Audio"; // Cambiar el texto del botón
+            } else {
+                // Pausar la reproducción si ya está reproduciendo
+                audio.pause();
+                playButton.textContent = "Reproducir Audio"; // Cambiar el texto del botón
+            }
+        });
+    </script>
+</body>
+</html>
